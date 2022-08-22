@@ -1,0 +1,149 @@
+.franchise-card {
+  display: block;
+  border-radius: rem(4px);
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__panel-button {
+    @include flex-row-center;
+    padding: rem(4px);
+    border-radius: rem(4px);
+    background-color: $black;
+    margin-right: rem(8px);
+    transition: .2s linear;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background: $black-hover;
+    }
+
+    &.active {
+      .franchise-card__panel-icon--star {
+        background: url("../assets/images/icons/icons-24-x-24-to-favorites-white-full.svg") center /contain no-repeat;
+      }
+
+      .franchise-card__panel-icon--comparison {
+        background: url("../assets/images/icons/icons-24-x-24-compared.svg") center /contain no-repeat;
+      }
+    }
+  }
+
+  &__panel-icon {
+    object-fit: contain;
+    width: rem(24px);
+    height: rem(24px);
+    background: $white;
+
+    &--star {
+      background: url("../assets/images/icons/icons-24-x-24-favorites-white.svg") center /contain no-repeat;
+    }
+
+    &--comparison {
+      background: url("../assets/images/icons/icons-24-x-24-comparison.svg") center /contain no-repeat;
+    }
+  }
+
+
+  &__tag {
+    font-size: rem(14px);
+    font-weight: 500;
+    line-height: 1.71;
+    color: $black;
+    padding: rem(1px) rem(8px) rem(1px) rem(8px);
+    border-radius: rem(4px);
+    background-color: $white;
+    display: inline-flex;
+    margin: auto 0 0 auto;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: rem(176px);
+    padding: rem(6.2px) rem(8px) rem(16px) rem(9px);
+    width: 100%;
+    border-radius: rem(4px) rem(4px) 0 0;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    border-radius: rem(4px) rem(4px) 0 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: 1.75;
+    color: $black;
+    margin-bottom: rem(16px);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+  }
+
+  &__inner {
+    padding: rem(16px);
+    border: solid rem(1px) #e3e5ed;
+    border-top: none;
+    border-radius: 0 0 rem(4px) rem(4px);
+  }
+
+  &__price {
+    display: inline-flex;
+    align-items: center;
+    padding: rem(8px) rem(8px) rem(8px) rem(16px);
+    border-radius: 4px;
+    background-color: #f7f8fa;
+    font-size: rem(16px);
+    font-weight: 700;
+    line-height: 1.75;
+    color: $black;
+  }
+
+  &__price-icon {
+    margin-right: rem(16px);
+    flex-shrink: 0;
+  }
+
+  &--small {
+
+    .franchise-card__box {
+      height: rem(88px);
+      padding: rem(8px);
+    }
+    .franchise-card__inner {
+      background: $white;
+      padding: rem(8px);
+    }
+    .franchise-card__title {
+      font-size: rem(14px);
+      margin-bottom: rem(8px);
+    }
+    .franchise-card__price {
+      background-color: #f7f8fa;
+      padding: rem(4px) rem(8px);
+      font-size: rem(14px);
+    }
+    .franchise-card__price-icon {
+      margin-right: rem(8px);
+    }
+  }
+}

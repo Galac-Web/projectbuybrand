@@ -1,0 +1,12 @@
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: $rangitoto;
+  cursor: pointer;
+  @include flex-row-center;
+  transition: .2s linear;
+  &:hover {
+    background: $rangitoto-hover;
+  }
+}

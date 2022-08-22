@@ -1,0 +1,26 @@
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.img {
+    &-preview {
+        object-fit: contain;
+
+        $sizes: (
+            'xl': 200px,
+            'md': 100px,
+            'sm': 50px,
+        );
+
+        @each $name, $size in $sizes {
+            &-#{$name} {
+                max-width: $size * 2;
+                height: $size;
+            }
+        }
+    }
+}
+
+.select2 {
+    width: 100% !important;
+}

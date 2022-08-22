@@ -1,0 +1,106 @@
+.information {
+  padding: rem(56px) rem(80px) rem(56px) rem(32px);
+  border-radius: 0 rem(28px) rem(28px) rem(28px);
+  background-color: #29292d;
+  @media (max-width: $lg-screen) {
+    padding: rem(50px) rem(60px) rem(40px) rem(26px);
+  }
+  @media (max-width: $sm-screen) {
+    padding: rem(28px) rem(15px) rem(30px) rem(15px);
+    border-radius: 0 rem(20px) rem(20px) rem(20px);
+  }
+  &__title {
+    margin-bottom: rem(40px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(32px);
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: rem(36px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(20px);
+    }
+  }
+  &__number {
+    font-size: rem(36px);
+    font-weight: 500;
+    color: $starship;
+    transform: rotate(-90deg);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(22px);
+    }
+  }
+  &__item-title {
+    font-size: rem(24px);
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: rem(8px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(19px);
+    }
+  }
+  &__box {
+    margin-left: rem(12px);
+  }
+  &__text {
+    font-size: rem(16px);
+    color: #fff;
+    line-height: 1.75;
+    @media (max-width: $sm-screen) {
+      font-size: rem(14px);
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    @media (max-width: $lg-screen) {
+      display: block;
+    }
+  }
+  &__block {
+    position: relative;
+    &:first-child {
+      padding-right: rem(47px);
+      &::after {
+        content: '';
+        width: 1px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        position: absolute;
+        background: rgba(#fff, 0.28);
+      }
+      @media (max-width: $xl-screen) {
+        padding-right: rem(28px);
+      }
+      @media (max-width: $lg-screen) {
+        margin-bottom: rem(36px);
+        padding-right: 0;
+        &::after {
+          display: none;
+        }
+      }
+      @media (max-width: $sm-screen) {
+        margin-bottom: rem(20px)
+      }
+    }
+    &:last-child {
+      padding-left: rem(59px);
+      @media (max-width: $xl-screen) {
+        padding-left: rem(32px);
+      }
+      @media (max-width: $lg-screen) {
+        padding-left: 0;
+      }
+    }
+  }
+  &__subtitle {
+    margin: rem(16px) 0;
+    font-size: rem(16px);
+    font-weight: 700;
+    color: $starship;
+  }
+
+}

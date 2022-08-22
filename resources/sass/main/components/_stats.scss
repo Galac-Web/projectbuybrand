@@ -1,0 +1,32 @@
+.stats {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-right: rem(15px);
+    &:last-child {
+      margin-right: 0;
+    }
+    &--comment {
+      padding: rem(2px) rem(7px) rem(2px) rem(4px);
+      background: rgba(32, 32, 35, 0.05);
+      border-radius: rem(5px);
+    }
+  }
+  &__icon {
+    width: rem(24px);
+    height: rem(24px);
+    margin-right: rem(8px);
+    flex-shrink: 0;
+  }
+  &__text {
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: $black;
+    &--bb {
+      border-bottom: 1px solid $black;
+    }
+  }
+}

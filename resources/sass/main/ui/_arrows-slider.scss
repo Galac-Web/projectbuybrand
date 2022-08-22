@@ -1,0 +1,43 @@
+.arrows-slider {
+  display: flex;
+  align-items: center;
+  &--end {
+    justify-content: flex-end;
+  }
+  &__button {
+    width: rem(40px);
+    height: rem(40px);
+    flex-shrink: 0;
+    border: rem(1px) solid $dodger-blue;
+    border-radius: rem(4px);
+    margin-right: rem(8px);
+    @include flex-row-center;
+    transition: .2s linear;
+    &:last-child {
+      margin-right: 0;
+    }
+    &--small {
+      height: rem(32px);
+      width: rem(32px);
+    }
+    &--prev {
+      .arrows-slider__icon {
+        transform: rotate(180deg);
+      }
+    }
+    &.swiper-button-disabled {
+      border-color: rgba(51, 132, 247, 0.4);
+      .arrows-slider__icon {
+        background: rgba($dodger-blue, 0.4);
+      }
+    }
+  }
+  &__icon {
+    @include mask-contain-center;
+    mask: url("../assets/images/icons/arrow-slider.svg");
+    -webkit-mask: url("../assets/images/icons/arrow-slider.svg");
+    height: rem(22px);
+    width: rem(13px);
+    background: $dodger-blue;
+  }
+}

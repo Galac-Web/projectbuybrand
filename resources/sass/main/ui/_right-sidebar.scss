@@ -1,0 +1,115 @@
+.right-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: $white;
+  border: 1px solid #E3E5ED;
+  z-index: 10;
+  @media (max-width: 1500px) {
+    display: none;
+  }
+  &__items {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item {
+    border-bottom: 1px solid #E3E5ED;
+    padding: rem(12px);
+    position: relative;
+    background: $white;
+    transition: .2s linear;
+    &:first-child {
+      border-top: 1px solid #E3E5ED;
+    }
+    &:hover {
+      background: rgba(241, 243, 252, 0.27);
+    }
+    &.active {
+      background-color: #f7f8fa;
+    }
+  }
+  &__icon {
+    width: rem(32px);
+    height: rem(32px);
+  }
+  &__notification {
+    font-weight: 500;
+    font-size: rem(13px);
+    line-height: rem(13px);
+    color: $white;
+    background: #FF5454;
+    border-radius: rem(6px);
+    position: absolute;
+    right: rem(7px);
+    top: rem(10px);
+    height: rem(16px);
+    min-width: rem(17.56px);
+    @include flex-row-center;
+  }
+  &__info {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: rem(530px);
+    height: 100%;
+    background: $white;
+    box-shadow: -8px 17px 21px 0 rgba(235, 239, 245, 0.51);
+    border-left: solid 1px #e3e5ed;
+    border-right: solid 1px #e3e5ed;
+    transition: .2s linear;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+  &__stats {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(32px);
+  }
+  &__stat {
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: 2;
+    color: $black;
+    margin-right: rem(30px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__inner {
+    padding: rem(136px) rem(24px) 0 rem(24px);
+  }
+  &__title {
+    margin-bottom: rem(16px);
+  }
+  &__notifications {
+    margin: 0 rem(-24px);
+    height: calc(100vh - 240px);
+    overflow-y: auto;
+    padding-bottom: rem(30px);
+    position: relative;
+  }
+  &__close {
+    width: rem(30px);
+    height: rem(30px);
+    position: absolute;
+    top: rem(142px);
+    left: rem(-30px);
+    border-radius: rem(4px) 0 0 rem(4px);
+    background: $black;
+    @include flex-row-center;
+    transition: .2s linear;
+    &:hover {
+      background: $black-hover;
+    }
+  }
+}

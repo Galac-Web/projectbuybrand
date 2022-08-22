@@ -1,0 +1,14 @@
+.activity {
+  &--indent {
+    margin: 24px 0;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    @media (max-width: $md-screen) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+

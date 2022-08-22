@@ -1,0 +1,96 @@
+.ages {
+  padding: rem(16px);
+  border-radius: rem(4px);
+  border: solid 1px #e3e5ed;
+
+  &__title {
+    font-size: rem(18px);
+    font-weight: 500;
+    color: $black;
+    margin-bottom: rem(16px);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, rem(64px));
+    grid-gap: rem(16px);
+    margin-right: rem(48px);
+    @media (max-width: $md-screen) {
+      margin: 0 0 rem(18px) 0;
+    }
+    @media (max-width: $sm-screen) {
+      grid-gap: rem(12px);
+      grid-template-columns: repeat(4, rem(54px));
+    }
+  }
+
+  &__item {
+    width: rem(64px);
+    height: rem(64px);
+    @include flex-row-center;
+    font-size: rem(24px);
+    font-weight: 500;
+    color: #fff;
+
+    &--dark-blue {
+      background: $dark-blue;
+    }
+
+    &--green {
+      background: $green;
+    }
+
+    &--blue {
+      background: $azure;
+    }
+
+    &--olive {
+      background: $rio-grande;
+    }
+    @media (max-width: $sm-screen) {
+      width: rem(54px);
+      height: rem(54px);
+      font-size: rem(18px);
+    }
+  }
+
+  &__row {
+    @include flex-row;
+    font-size: rem(16px);
+    margin-bottom: rem(7px);
+    span {
+      font-size: rem(21px);
+      font-weight: 500;
+      min-width: rem(56px);
+      @media (max-width: $sm-screen) {
+        font-size: rem(18px);
+      }
+    }
+    @media (max-width: $sm-screen) {
+      font-size: rem(14px);
+    }
+  }
+  &__inner {
+    @include flex-row;
+    @media (max-width: $md-screen) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__separator {
+    width: rem(18px);
+    height: rem(1px);
+    margin: 0 rem(9px);
+    background: $black;
+  }
+  &__icon {
+    flex-shrink: 0;
+    width: rem(24px);
+    height: rem(24px);
+    margin-left: 8px;
+    img {
+      width: 60%;
+      height: 60%;
+    }
+  }
+}

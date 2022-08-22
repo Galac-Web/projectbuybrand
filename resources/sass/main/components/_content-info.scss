@@ -1,0 +1,105 @@
+.content-info {
+  @media (max-width: $sm-screen) {
+    order: -1;
+  }
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    padding: rem(9px) rem(16px);
+    background: $light-grey;
+    border-radius: rem(4px);
+    margin-bottom: rem(4px);
+    line-height: rem(28px);
+  }
+  &__title-icon {
+    width: rem(32px);
+    height: rem(32px);
+    margin-right: rem(18px);
+    @media (max-width: $sm-screen) {
+      margin-right: rem(10px);
+      width: rem(26px);
+      height: rem(26px);
+    }
+  }
+  &__text {
+    font-size: rem(16px);
+    line-height: rem(28px);
+    max-width: rem(569px);
+    color: $black;
+    margin-bottom: rem(26px);
+  }
+  &__stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: rem(-15px);
+  }
+  &__stat-item {
+    display: flex;
+    align-items: center;
+    margin:  0 rem(18px) rem(15px) 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__stat-icon {
+    width: rem(24px);
+    height: rem(24px);
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-right: rem(4px);
+  }
+  &__stat-text {
+    font-size: rem(16px);
+    line-height: rem(19px);
+    color: $black;
+    &--medium {
+      font-weight: 500;
+    }
+  }
+  &__wrapper {
+    padding: 0 rem(16px);
+  }
+  &__about-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: rem(16px);
+    padding-bottom: rem(17px);
+    border-bottom: rem(1px) solid #E3E5ED;
+    @media (max-width: $lg-screen) {
+      flex-direction: column;
+    }
+  }
+  &__about {
+    margin-right: rem(33px);
+    @media (max-width: $lg-screen) {
+      margin: 0 0 rem(24px) 0;
+    }
+  }
+  &__participants {
+    margin-top: rem(16px);
+  }
+  &__participants-title {
+    margin-bottom: rem(10px);
+  }
+  &__users {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 rem(16px);
+    margin-bottom: rem(-10px);
+  }
+  &__user {
+    border-radius: 50%;
+    width: rem(56px);
+    height: rem(56px);
+    margin: 0 rem(10px) rem(10px) 0;
+    &:last-child {
+      margin-right: 0;
+    }
+    @media (max-width: $sm-screen) {
+      width: rem(45px);
+      height: rem(45px);
+    }
+  }
+}

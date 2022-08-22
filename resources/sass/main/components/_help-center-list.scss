@@ -1,0 +1,40 @@
+.help-center-list {
+  width: 100%;
+  max-width: rem(465px);
+  position: relative;
+  @media (max-width: $xl-screen) {
+    max-width: 100%;
+    margin-top: rem(24px);
+  }
+  &__inner {
+    width: 100%;
+    background: #fff;
+    padding: rem(24px) rem(3px) rem(16px) rem(12px);
+    border-radius: rem(4px);
+    border: solid 1px #e3e5ed;
+    height: rem(536px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: rem(6px);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #babcc6;
+      border-radius: rem(3.5px);
+    }
+    @media (max-width: $sm-screen) {
+      padding: rem(18px) rem(3px) rem(14px) rem(10px);
+    }
+    &--height {
+      height: rem(616px);
+    }
+  }
+  &__title {
+    margin-bottom: rem(16px);
+  }
+}

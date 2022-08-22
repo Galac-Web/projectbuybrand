@@ -1,0 +1,51 @@
+.title {
+  font-size: rem(38px);
+  font-weight: 500;
+  color: $black;
+  @media (max-width: $md-screen) {
+    font-size: rem(30px);
+  }
+  @media (max-width: $sm-screen) {
+    font-size: rem(22px);
+  }
+  &--large {
+    font-size: rem(34px);
+    @media (max-width: $md-screen) {
+      font-size: rem(26px);
+    }
+    @media (max-width: $sm-screen) {
+      font-size: rem(20px);
+    }
+  }
+  &--medium {
+    font-size: rem(30px);
+    line-height: 1.33;
+    @media (max-width: $md-screen) {
+      font-size: rem(24px);
+    }
+    @media (max-width: $sm-screen) {
+      font-size: rem(18px);
+    }
+  }
+  &--white {
+    color: #fff;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--md {
+    font-size: rem(24px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(22px);
+    }
+  }
+  &--mb {
+    margin-bottom: rem(32px);
+  }
+}
+
+.text {
+  font-size: rem(16px);
+  color: $black;
+  line-height: 1.75;
+}

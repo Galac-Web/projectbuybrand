@@ -1,0 +1,22 @@
+.btn-bottom {
+  width: rem(40px);
+  height: rem(40px);
+  background: $dodger-blue;
+  position: absolute;
+  bottom: 0;
+  right: rem(16px);
+  border-radius: rem(4px);
+  cursor: pointer;
+  @include flex-row-center;
+  transition: .2s linear;
+  &:hover {
+    background: $dodger-blue-hover;
+  }
+  &--b {
+    bottom: rem(16px);
+  }
+  @media (max-width: $sm-screen) {
+    width: rem(35px);
+    height: rem(35px);
+  }
+}

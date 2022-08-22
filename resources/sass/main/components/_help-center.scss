@@ -1,0 +1,32 @@
+.help-center {
+  padding: rem(56px) 0;
+  background: $light-grey;
+  @media (max-width: $sm-screen) {
+    padding: rem(34px) 0;
+  }
+  &__title {
+    margin-bottom: rem(48px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(20px);
+    }
+  }
+
+
+  &__wrapper {
+    display: flex;
+    @media (max-width: $xl-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__map {
+    margin-right: rem(16px);
+    border-radius: 10px;
+    width: 100%;
+    min-height: rem(536px);
+  }
+
+  &__btn-bottom {
+    bottom: rem(16px);
+  }
+}

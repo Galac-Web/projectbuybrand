@@ -1,0 +1,41 @@
+.all-parameters {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: rem(176px);
+  border-radius: rem(4px);
+  background-color: #e7edf7;
+  height: rem(35px);
+  padding: 0 rem(16px);
+  font-size: rem(14px);
+  color: $black !important;
+  position: relative;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  &__arrow {
+    width: rem(24px) !important;
+    height: rem(24px) !important;
+    border-radius: rem(4px);
+    background-color: #3384f7;
+    @include flex-row-center;
+
+    &::after {
+      content: '';
+      background: url("../../assets/images/icons/arrow-select.svg") center /contain no-repeat;
+      width: rem(24px);
+      height: rem(24px);
+    }
+    b {
+      display: none;
+    }
+  }
+
+  &.open {
+    .all-parameters__arrow {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

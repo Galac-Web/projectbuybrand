@@ -1,0 +1,15 @@
+.risk-reduction {
+  padding: rem(40px) 0;
+
+  &__title {
+    margin-bottom: rem(42px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(34px);
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}

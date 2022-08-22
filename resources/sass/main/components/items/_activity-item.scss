@@ -1,0 +1,30 @@
+.activity-item {
+  border-radius: 4px;
+  border: solid 1px #e3e5ed;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(13px) rem(24px) rem(13px) rem(40px);
+  &__img {
+    margin-right: rem(40px);
+    width: rem(80px);
+    height: rem(80px);
+    @media (max-width: $sm-screen) {
+      width: rem(50px);
+      height: rem(50px);
+      margin-right: rem(20px);
+    }
+  }
+  &__btn {
+    padding-left: rem(25px);
+    padding-right: rem(25px);
+    @media (max-width: $sm-screen) {
+      padding-left: rem(16px);
+      padding-right: rem(16px);
+    }
+  }
+  @media (max-width: $sm-screen) {
+    padding: rem(10px) rem(16px);
+  }
+}

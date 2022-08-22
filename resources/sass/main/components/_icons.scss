@@ -1,0 +1,55 @@
+.icons {
+  display: flex;
+  align-items: center;
+  &__item {
+    @include flex-row-center;
+    width: rem(40px);
+    height: rem(40px);
+    background: #F4F5F8;
+    margin-right: rem(16px);
+    border-radius: 50%;
+    transition: .2s linear;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background: #edeef1;
+    }
+    &--dark-square {
+      width: rem(32px);
+      height: rem(32px);
+      margin-right: rem(8px);
+      border-radius: rem(4px);
+      background: $black;
+      &:hover {
+        background: $black-hover;
+      }
+      .icons__icon {
+        background: #fff;
+      }
+    }
+    &.active {
+      .icons__icon--star {
+        mask: url("../../assets/images/icons/icons-24-x-24-to-favorites-white-full.svg");
+        -webkit-mask: url("../../assets/images/icons/icons-24-x-24-to-favorites-white-full.svg");
+      }
+      .icons__icon--comparison {
+        mask: url("../../assets/images/icons/icons-24-x-24-compared.svg");
+        -webkit-mask: url("../../assets/images/icons/icons-24-x-24-compared.svg");
+      }
+    }
+  }
+  &__icon {
+    width: rem(24px);
+    height: rem(24px);
+    @include mask-contain-center;
+    &--star {
+      mask: url("../../assets/images/icons/icons-24-x-24-favorites-white.svg");
+      -webkit-mask: url("../../assets/images/icons/icons-24-x-24-favorites-white.svg");
+    }
+    &--comparison {
+      mask: url("../../assets/images/icons/icons-24-x-24-comparison.svg");
+      -webkit-mask: url("../../assets/images/icons/icons-24-x-24-comparison.svg");
+    }
+  }
+}

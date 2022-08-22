@@ -1,0 +1,13 @@
+.cropper {
+    &-line {
+        background-color: $cropper-line-color !important;
+    }
+
+    &-view-box {
+        outline: $cropper-view-box-size solid $cropper-view-box-color !important;
+    }
+
+    &-point {
+        background-color: $cropper-point-color !important;
+    }
+}

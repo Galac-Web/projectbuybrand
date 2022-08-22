@@ -1,0 +1,68 @@
+.nav {
+    &-tabs {
+        border-bottom: 2px solid $blue !important;
+    }
+
+    &-tabs &-link {
+        &:not(:last-of-type) {
+            margin-right: 0.5rem;
+        }
+    }
+
+    &-tabs &-link.active {
+        color: $white !important;
+        background-color: $blue !important;
+        border-color: $blue !important;
+    }
+
+    &-tabs &-link:hover,
+    &-tabs &-link:focus {
+        background-color: $white;
+        border-bottom-color: $blue;
+        box-shadow: 0 1px 0 0 $blue;
+    }
+}
+
+.custom-file {
+    &__list {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        display: inline-flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    &__icon {
+        font-size: 4rem;
+        display: inline-flex;
+        position: relative;
+
+        &::before {
+            content: attr(data-extension);
+            color: $white;
+            background-color: $blue;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            right: 0;
+            transform: translate(0.5rem, 1.75rem);
+            padding: 0 0.5rem;
+            border-radius: 0.25rem;
+        }
+    }
+
+    &__name {
+        margin-top: 0.5rem;
+    }
+
+    & + .upload-preview {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+    }
+}

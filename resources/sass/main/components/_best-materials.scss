@@ -1,0 +1,45 @@
+.best-materials {
+  padding: rem(35px) 0;
+  background: #F7FAFD;
+  @media (max-width: $sm-screen) {
+    padding: rem(28px) 0;
+  }
+  &__title {
+    margin-bottom: rem(26px);
+    line-height: 167%;
+  }
+  &__inner {
+    text-align: center;
+    margin: 0 auto;
+    max-width: rem(684px);
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(16px);
+    @media (max-width: $sm-screen) {
+      flex-direction: column;
+      margin-bottom: rem(14px);
+    }
+  }
+  &__text {
+    margin-top: rem(6px);
+    font-size: rem(14px);
+    line-height: rem(18px);
+    color: #8F8F91;
+  }
+  &__input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: rem(22px);
+    text-align: center;
+    min-height: rem(24px);
+    @media (max-width: $sm-screen) {
+      margin: 0 0 rem(12px) 0;
+    }
+  }
+  &__button {
+    padding: rem(8px) rem(14px);
+    min-height: rem(24px);
+    font-size: rem(14px);
+  }
+}

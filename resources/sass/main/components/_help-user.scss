@@ -1,0 +1,143 @@
+.help-user {
+  display: flex;
+  padding: rem(16px) rem(5px) rem(8px) rem(5px);
+  border-bottom: solid 1px rgba(32, 32, 35, 0.1);
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &__img {
+    width: rem(56px);
+    height: rem(56px);
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: rem(16px);
+    @media (max-width: $sm-screen) {
+      width: rem(45px);
+      height: rem(45px);
+      margin-right: rem(12px);
+    }
+  }
+
+  &__overhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: rem(8px);
+    @media (max-width: $sm-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    font-size: rem(16px);
+    color: $black;
+    line-height: 1.5;
+    position: relative;
+    @media (max-width: $sm-screen) {
+      font-size: rem(14px);
+    }
+  }
+
+  &__status {
+    border-radius: 4px;
+    background: $dodger-blue;
+    padding: rem(1.5px) rem(12px);
+    line-height: 1.5;
+    font-size: rem(13px);
+    font-weight: 500;
+    color: #fff;
+
+    &--green {
+      background-color: #5ac806;
+    }
+
+    &--purple {
+      background-color: #a68dcc;
+    }
+
+    @media (max-width: $sm-screen) {
+      font-size: rem(12px);
+      margin-top: rem(5px);
+    }
+  }
+
+  &__title {
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: 1.75;
+    color: $black;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+    @media (max-width: $sm-screen) {
+      font-size: rem(14px);
+    }
+  }
+
+  &__text {
+    padding: rem(8px);
+    font-size: rem(14px);
+    line-height: 1.79;
+    letter-spacing: -0.3px;
+    color: $black;
+    background-color: #f7fafd;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+    margin-top: rem(8px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(12px);
+    }
+  }
+
+  &__box {
+    width: 100%;
+  }
+
+  &__btn {
+    display: block;
+    max-width: rem(80px);
+    padding: 0 rem(8px);
+    font-size: rem(14px);
+    line-height: 1.71;
+    color: $dodger-blue;
+    border: solid 1px $dodger-blue;
+    background-color: #fff;
+    border-radius: 4px;
+    min-height: 24px;
+    margin: rem(8px) 0 0 auto;
+    transition: .2s linear;
+
+    &:hover {
+      background-color: #f1f7fd;
+    }
+  }
+
+  &__circle {
+    width: rem(10px);
+    height: rem(10px);
+    background: $limeade;
+    margin-right: rem(4px);
+    border-radius: 50%;
+  }
+
+  &__online {
+    display: flex;
+    align-items: center;
+    font-size: rem(12px);
+    line-height: rem(24px);
+    color: $limeade;
+    margin-left: rem(5px);
+    margin-top: rem(-5px);
+  }
+}

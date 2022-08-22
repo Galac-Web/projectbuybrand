@@ -1,0 +1,168 @@
+.doubt {
+  display: flex;
+  align-items: center;
+  border-radius: 0 rem(20px) rem(20px) rem(20px);
+  background: $black;
+
+  &__box {
+    width: 100%;
+    padding: rem(40px) rem(64px) rem(40px) rem(24px);
+
+    @media (max-width: $sm-screen) {
+      padding: rem(30px) rem(20px) rem(40px) rem(20px);
+    }
+  }
+
+  &__title {
+    font-size: rem(30px);
+    font-weight: 500;
+    line-height: 1.27;
+    color: $rangitoto;
+    margin-bottom: rem(13px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(20px);
+    }
+  }
+
+  &__subtitle {
+    line-height: 1;
+    font-size: rem(24px);
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: rem(18px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(18px);
+    }
+  }
+
+  &__text {
+    color: #fff;
+    font-size: rem(18px);
+    line-height: 1.33;
+    margin-bottom: rem(32px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(16px);
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    @media (max-width: $md-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    min-width: rem(232px);
+    @media (max-width: $xxl-screen) {
+      min-width: rem(200px);
+    }
+    @media (max-width: $md-screen) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    background: transparent;
+    width: 100%;
+    max-width: rem(296px);
+    margin-right: rem(16px);
+    padding: rem(16px);
+    border-radius: rem(4px);
+    border: solid 1px rgba(255, 255, 255, 0.8);
+    color: #fff;
+    line-height: 1.5;
+    font-size: rem(16px);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    @media (max-width: $md-screen) {
+      max-width: 100%;
+      margin: 0 0 rem(16px) 0;
+    }
+    @media (max-width: $sm-screen) {
+      min-height: 50px;
+      font-size: rem(14px);
+      padding: rem(12px) rem(16px);
+    }
+  }
+
+  &__select-wrapper {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: rem(184px);
+    margin-right: rem(16px);
+
+    .select2-container {
+      width: 100% !important;
+    }
+
+    .select2-selection__rendered {
+      line-height: rem(56px) !important;
+      width: 100%;
+      padding: 0 !important;
+      font-size: rem(16px);
+      color: rgba(255, 255, 255, 0.7) !important;
+      @media (max-width: $sm-screen) {
+        line-height: rem(50px);
+      }
+      @media (max-width: $sm-screen) {
+        font-size: rem(14px);
+      }
+    }
+
+    .select2-selection--single {
+      height: rem(56px) !important;
+      border: solid 1px rgba(255, 255, 255, 0.8);
+      border-radius: rem(4px);
+      background: transparent;
+      padding: rem(16px) rem(40px) rem(16px) rem(16px);
+      display: flex;
+      align-items: center;
+      @media (max-width: $sm-screen) {
+        height: rem(50px) !important;
+      }
+    }
+
+    .select2-selection__arrow {
+      width: rem(20px) !important;
+      height: rem(16px) !important;
+      top: 50% !important;
+      right: rem(14px) !important;
+      transform: translateY(-50%);
+      background: url('../../assets/images/icons/icons-arrow-down.svg') center /contain no-repeat;
+      b {
+        display: none;
+      }
+    }
+    .select2-container--open {
+      .select2-selection__arrow {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    @media (max-width: $md-screen) {
+      max-width: 100%;
+      margin: 0 0 rem(20px) 0;
+    }
+  }
+
+  &__select {
+    width: 100%;
+  }
+  &__img {
+    width: 100%;
+    max-width: rem(496px);
+    @media (max-width: $xxl-screen) {
+      max-width: rem(420px);
+    }
+    @media (max-width: $xl-screen) {
+      max-width: rem(240px);
+    }
+    @media (max-width: $lg-screen) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.nav {
+
+  background-color: $light-grey;
+  @media (max-width: $xl-screen) {
+    display: none;
+  }
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    display: block;
+    position: relative;
+    font-size: rem(16px);
+    font-weight: 500;
+    line-height: 1.5;
+    color: #202023;
+    margin-right: rem(75px);
+    padding: rem(16px) 0;
+    &:last-child {
+      margin-right: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: rem(2.8px);
+      background: #3384f7;
+      border-radius: rem(19px);
+      opacity: 0;
+      transition: .2s linear;
+    }
+    &.active {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    background: #edf0f4;
+    z-index: 10;
+    padding: rem(24px) rem(96px) rem(24px) 0;
+    border-radius: 0 0 rem(10px) rem(10px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__tabs {
+    min-width: rem(232px);
+    //margin-right: rem(24px);
+  }
+  &__tab {
+    width: 100%;
+    font-size: rem(16px);
+    line-height: 3;
+    color: $black;
+    display: flex;
+    align-items: center;
+    padding: 0 rem(24px) 0 rem(96px);
+    &.active {
+      background-color: #fff;
+      font-weight: 700;
+    }
+  }
+  &__arrow {
+    width: rem(24px);
+    height: rem(24px);
+    margin-left: auto;
+    background: url("../../assets/images/icons/icons-24-x-24-arrow-menu.svg") center /contain no-repeat;
+  }
+  &__info {
+    margin-right: rem(24px);
+    width: 100%;
+    &--bg {
+      padding: rem(16px);
+      background: rgba($white, 0.68);
+      max-width: rem(912px);
+    }
+  }
+  &__button {
+    flex-shrink: 0;
+    padding: rem(12px) rem(16px);
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+  &__wrapper {
+    cursor: pointer;
+    .nav__link {
+      margin-right: 0;
+    }
+    margin-right: rem(75px);
+    &:hover {
+      .nav__menu {
+        opacity: 1;
+        visibility: visible;
+      }
+      .nav__link {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__select-btn {
+    padding: rem(12px) rem(16px);
+    width: 100%;
+    max-width: rem(208px);
+    margin: rem(32px) auto 0 auto;
+  }
+}

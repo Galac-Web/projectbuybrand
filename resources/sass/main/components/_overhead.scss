@@ -1,0 +1,47 @@
+.overhead {
+  @include flex-row;
+  @media (max-width: $md-screen) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &--mb {
+    margin-bottom: rem(40px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(24px);
+    }
+  }
+  &__box {
+    @include flex-row;
+    margin-left: rem(20px);
+    @media (max-width: $md-screen) {
+      margin: 0;
+    }
+  }
+  &__btn {
+    display: block;
+    width: rem(32px);
+    height: rem(32px);
+    background: $rangitoto;
+    transition: .2s linear;
+    border-radius: 50%;
+    margin-right: rem(16px);
+    @include flex-row-center;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background: $rangitoto-hover;
+    }
+  }
+  &__wrapper {
+    @include flex-row;
+    @media (max-width: $md-screen) {
+      margin: rem(16px) 0 0 0;
+    }
+  }
+  &__text {
+    font-size: rem(14px);
+    color: $black;
+    margin-left: rem(8px);
+  }
+}

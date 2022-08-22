@@ -1,0 +1,21 @@
+$icons: (
+    // Socials
+    'vk', 'ok', 'facebook', 'twitter', 'google', 'yandex', 'mailru',
+);
+
+.icon {
+    $size: $font-size-base;
+
+    width: $size;
+    height: $size;
+    
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @each $name, $icon in $icons {
+        &-#{$name} {
+            background-image: url('/media/icons/#{$name}.svg');
+        }
+    }
+}

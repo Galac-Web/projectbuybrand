@@ -1,0 +1,31 @@
+.index-forum-page {
+  &__log-in-info {
+    margin-bottom: rem(59px);
+    @media (max-width: $md-screen) {
+      margin-bottom: rem(40px);
+    }
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(30px);
+    }
+  }
+  &__poster {
+    margin: rem(50px) 0;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__poster-aside {
+    max-width: rem(340px);
+    @media (max-width: $xl-screen) {
+      display: none;
+    }
+  }
+  &__mob-app-info {
+    padding-right: rem(7px);
+    padding-left: rem(7px);
+    margin: rem(90px) 0 rem(88px) 0;
+    @media (max-width: $xl-screen) {
+      display: none;
+    }
+  }
+}

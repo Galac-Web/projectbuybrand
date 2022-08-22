@@ -1,0 +1,30 @@
+.inner-grid {
+  display: grid;
+  grid-template-columns: rem(324px) 1fr;
+  grid-gap: rem(32px);
+  > * {
+    min-width: 0;
+  }
+  @media (max-width: 1320px) {
+    grid-template-columns: rem(300px) 1fr;
+    grid-gap: rem(26px);
+  }
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: $sm-screen) {
+    grid-gap: rem(40px);
+  }
+  &__franchise-info {
+    margin-bottom: rem(15px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    margin-bottom: rem(35px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(28px);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.services-center {
+  background: $polar;
+
+  &__search {
+    max-width: rem(560px);
+    margin: 0 auto rem(32px) auto;
+    @media (max-width: $sm-screen) {
+      margin: 0 auto rem(20px) auto;
+    }
+  }
+}

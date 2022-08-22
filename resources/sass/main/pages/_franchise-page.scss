@@ -1,0 +1,19 @@
+.franchise-page {
+  &__tabs {
+    margin-bottom: 40px;
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(25px);
+    }
+  }
+  &__filters {
+    margin-bottom: rem(40px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(30px);
+    }
+  }
+  &__poster {
+    @media (max-width: $xl-screen) {
+      display: none;
+    }
+  }
+}

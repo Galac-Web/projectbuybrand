@@ -1,0 +1,38 @@
+.pagination {
+  &--mt {
+    margin-top: rem(24px);
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__pages {
+      margin: 0 rem(20px);
+      font-weight: 500;
+      font-size: rem(20px);
+      line-height: rem(32px);
+    span {
+      color: $dodger-blue;
+    }
+  }
+  &__arrow {
+    border: 1px solid #3384F7;
+    border-radius: rem(4px);
+    width: rem(40px);
+    height: rem(40px);
+    @include flex-row-center;
+    &--disabled {
+      border: 1px solid rgba(51, 132, 247, 0.4);
+      .pagination__icon {
+        opacity: 0.4;
+      }
+    }
+  }
+  &__icon {
+    width: rem(13px);
+    height: rem(22px);
+    color: $dodger-blue;
+    &--prev {
+      transform: rotate(180deg);
+    }
+  }
+}

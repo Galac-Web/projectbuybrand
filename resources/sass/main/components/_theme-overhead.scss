@@ -1,0 +1,23 @@
+.theme-overhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(24px);
+  @media (max-width: $md-screen) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-right: rem(24px);
+    @media (max-width: $md-screen) {
+      margin-right: 0;
+    }
+  }
+  &__button {
+    padding: rem(8px) rem(14px);
+    flex-shrink: 0;
+    @media (max-width: $md-screen) {
+      margin-top: rem(24px);
+    }
+  }
+}
