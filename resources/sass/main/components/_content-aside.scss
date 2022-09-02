@@ -1,0 +1,41 @@
+.content-aside {
+  @media (max-width: $xl-screen) {
+    order: -1;
+  }
+  &__clear {
+    min-height: rem(40px);
+    margin-bottom: rem(20px);
+  }
+  &__search {
+    margin-bottom: rem(30px);
+  }
+  &__checkbox {
+    margin: 0 0 rem(16px) rem(16px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__label {
+    margin: rem(27px) 0 rem(18px) rem(16px);
+  }
+  &__category-item {
+    margin-bottom: rem(8px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__categories {
+    margin-bottom: rem(76px);
+    @media (max-width: $xl-screen) {
+      margin-bottom: 0;
+    }
+  }
+  &__poster {
+    margin-bottom: rem(50px);
+  }
+  &--hidden {
+    @media (max-width: $xl-screen) {
+      display: none;
+    }
+  }
+}

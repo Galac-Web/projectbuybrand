@@ -1,0 +1,52 @@
+.menu {
+  @include flex-row-center;
+
+  &__button {
+    width: rem(28px);
+    height: rem(28px);
+    flex-shrink: 0;
+    background: $black;
+    mask: url("../../assets/images/icons/menu.svg");
+    -webkit-mask: url("../../assets/images/icons/menu.svg");
+    @include mask-contain-center;
+    @media (max-width: $sm-screen) {
+      width: rem(24px);
+      height: rem(24px);
+    }
+    &.open {
+      transform: scale(0.75);
+      mask: url("../../assets/images/icons/cross.svg");
+      -webkit-mask: url("../../assets/images/icons/cross.svg");
+    }
+  }
+
+  &__list {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    //width: calc(100vw - 40%);
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    background: $rangitoto;
+    z-index: 15;
+    padding: rem(30px);
+
+      //display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+  }
+  &__link {
+    display: block;
+    color: $black;
+    font-size: rem(24px);
+    font-weight: 500;
+    margin: 0 0 rem(20px) 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

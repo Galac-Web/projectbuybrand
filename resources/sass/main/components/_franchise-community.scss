@@ -1,0 +1,31 @@
+.franchise-community {
+  background: $polar;
+  padding: rem(56px) 0;
+  @media (max-width: $sm-screen) {
+    padding: rem(32px) 0 rem(40px) 0;
+  }
+  &__tabs {
+    margin-bottom: rem(24px);
+  }
+  &__elements {
+    display: flex;
+    align-items: flex-start;
+    @media (max-width: $xl-screen) {
+      display: block;
+    }
+  }
+  &__help-center {
+    height: 100%;
+    margin-left: rem(16px);
+    margin-top: rem(-43px);
+    flex-shrink: 0;
+    width: 100%;
+    max-width: rem(465px);
+    .help-center-list__inner {
+      height: rem(590px);
+    }
+    @media (max-width: $xl-screen) {
+      margin: 0;
+    }
+  }
+}

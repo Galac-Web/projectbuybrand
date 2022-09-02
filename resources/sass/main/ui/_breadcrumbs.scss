@@ -1,0 +1,41 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &--mb {
+    margin-bottom: 33px;
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(28px);
+    }
+  }
+  &__link {
+    color: #3384F7;
+    position: relative;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    display: inline-block;
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: rem(-29px);
+      top: 50%;
+      transform: translateY(-50%);
+      width: rem(5px);
+      height: rem(8px);
+      background: url("../../assets/images/icons/arrow-grey.svg") center /contain no-repeat;
+      pointer-events: none;
+    }
+
+    &.active {
+      color: #909091;
+      pointer-events: none;
+    }
+  }
+}

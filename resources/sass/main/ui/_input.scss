@@ -1,0 +1,22 @@
+.input {
+  width: 100%;
+  padding: rem(16px);
+  border-radius: rem(4px);
+  border: solid 1px rgba(255, 255, 255, 0.8);
+  color: $white;
+  font-size: rem(16px);
+  line-height: 1.5;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  &--white {
+    padding: 0 rem(15px);
+    background: $white;
+    line-height: rem(40px);
+    font-size: rem(14px);
+    color: $black;
+    &::placeholder {
+      color: #8F8F91;
+    }
+  }
+}

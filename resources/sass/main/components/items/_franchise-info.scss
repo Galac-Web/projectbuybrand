@@ -1,0 +1,142 @@
+.franchise-info {
+  background: #F7F8FA;
+  box-shadow: 0 1px 0 #DFE0E3;
+  border-radius: 0 0 5px 5px;
+  padding: rem(15px) rem(15px) 0 rem(15px);
+
+  &--padding {
+    padding: rem(16px);
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: rem(14px);
+  }
+
+  &__panel {
+    display: flex;
+    align-items: center;
+  }
+
+  &__panel-button {
+    margin-right: rem(15px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: rem(18px);
+    line-height: rem(24px);
+    color: $dodger-blue;
+    margin-right: rem(12px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(16px);
+      line-height: rem(22px);
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(20px);
+  }
+
+  &__author-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: rem(56px);
+    height: rem(56px);
+    margin-right: rem(16px);
+    border-radius: 50%;
+    object-fit: cover;
+    @media (max-width: $sm-screen) {
+      width: rem(46px);
+      height: rem(46px);
+    }
+  }
+
+  &__author-name {
+    font-size: rem(16px);
+    line-height: rem(24px);
+  }
+
+  &__online {
+    font-size: rem(12px);
+    color: $limeade;
+    display: flex;
+    align-items: center;
+    margin-left: rem(5px);
+  }
+
+  &__online-circle {
+    border-radius: 50%;
+    display: inline-block;
+    width: rem(10px);
+    height: rem(10px);
+    background: $limeade;
+    margin-right: rem(5px);
+  }
+
+  &__img {
+    border-radius: rem(5px);
+    object-fit: cover;
+    margin-bottom: rem(15px);
+    display: block;
+    width: 100%;
+  }
+
+  &__time {
+    font-size: rem(12px);
+    line-height: rem(15px);
+    color: #79797B;
+  }
+
+  &__description {
+    font-size: rem(16px);
+    line-height: rem(28px);
+    color: #000;
+    max-width: rem(556px);
+    white-space: pre-wrap;
+    text-align: left;
+    font-family: inherit;
+    @media (max-width: $xl-screen) {
+      max-width: 100%;
+    }
+    @media (max-width: $sm-screen) {
+      font-size: rem(14px);
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $sm-screen) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: #9D9EA0;
+  }
+
+  &__button {
+    padding: rem(8px) rem(28px) rem(8px) rem(20px);
+    @media (max-width: $sm-screen) {
+      width: 100%;
+      margin-top: rem(16px);
+    }
+  }
+}
+

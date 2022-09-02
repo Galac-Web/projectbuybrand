@@ -1,0 +1,71 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+input, button {
+  border: none;
+  outline: none;
+  padding: 0;
+  background: transparent;
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+button {
+  cursor: pointer;
+}
+
+img, video, audio, canvas, input,
+select, button, progress { max-width: 100%; }
+
+input[type="file"],
+input[type="submit"] { white-space: pre-wrap; }
+
+progress,
+input[type="range"] { width: 100%; }
+
+@supports (--moz-appearance: none) {
+  input[type="number"] { width: 100%; }
+}
+
+hr {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}

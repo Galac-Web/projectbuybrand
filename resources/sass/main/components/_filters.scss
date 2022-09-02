@@ -1,0 +1,303 @@
+.filters {
+  padding: rem(16px);
+  background: $light-grey;
+  transition: .2s linear;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: rem(16px);
+    @media (max-width: $md-screen) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin: rem(16px) 0;
+
+    &--no-m {
+      margin: 0;
+    }
+    &--start {
+      align-items: flex-start;
+    }
+
+    &--col {
+      @media (max-width: $md-screen) {
+        flex-direction: column;
+      }
+    }
+
+    &--lg-col {
+      @media (max-width: $xxl-screen) {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: $sm-screen) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &--grid {
+      @media (max-width: $lg-screen) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: rem(16px);
+      }
+      @media (max-width: $sm-screen) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 0;
+      }
+    }
+  }
+
+  &__item {
+    width: 100% !important;
+    margin-right: rem(16px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: $md-screen) {
+      margin: 0 0 rem(16px) 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__range-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: rem(240px);
+
+    .irs--flat .irs-line {
+      height: rem(2px);
+      background-color: rgba(37, 121, 242, 0.2);
+      top: rem(35px);
+    }
+
+    .irs--flat .irs-bar {
+      height: rem(2px);
+      background: $dodger-blue;
+      top: rem(35px);
+    }
+
+    .irs-handle {
+      cursor: pointer;
+      top: rem(26px);
+      border-radius: 50%;
+      background: $dodger-blue;
+      width: rem(18px);
+      height: rem(18px);
+      box-shadow: -2px 2px 4px 0 rgba(136, 185, 255, 0.46);
+
+      i {
+        display: none !important;
+      }
+    }
+
+    .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+      padding: rem(3px) rem(4px);
+      font-size: rem(14px);
+      color: $dodger-blue;
+      background: #fff;
+      top: rem(-5px);
+      filter: drop-shadow(0 0 rem(7px) rgba(37, 121, 242, 0.15));
+
+      &::before {
+        border-top-color: #fff;
+      }
+
+    }
+
+    .irs-max, .irs-min {
+      display: none;
+    }
+
+    @media (max-width: $md-screen) {
+      margin-top: rem(16px);
+      width: 100%;
+    }
+  }
+
+  &__range-label {
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    position: absolute;
+  }
+
+  &__checkbox {
+    margin-right: rem(24px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+    @media (max-width: $sm-screen) {
+      margin: 0 0 rem(16px) 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &--mr {
+      margin-right: rem(16px);
+    }
+    &--shrink {
+      flex-shrink: 0;
+    }
+  }
+
+  &__reset {
+    display:  flex;
+    align-items: center;
+    margin: rem(8px) 0 0 auto;
+    border-radius: rem(24px);
+    background-color: #fff;
+    line-height: 1.71;
+    color: $black;
+    font-size: rem(14px);
+    text-align: center;
+    padding: rem(6px) rem(16px);
+    transition: .2s linear;
+
+    &:hover {
+      color: #fff;
+      background: $dodger-blue;
+      .filters__reset-icon {
+        background: #fff;
+      }
+    }
+    @media (max-width: $sm-screen) {
+      margin-top: rem(14px);
+    }
+    &--order {
+      @media (max-width: $xxl-screen) {
+        order: -1;
+        margin-bottom: rem(16px);
+      }
+      @media (max-width: $sm-screen) {
+        margin: 0 auto rem(16px) auto;
+      }
+    }
+  }
+
+  &__block {
+    width: 100%;
+    display: flex;
+    margin-right: rem(16px);
+    @media (max-width: $md-screen) {
+      margin-right: 0;
+      flex-direction: column;
+    }
+  }
+  &__select {
+    margin-right: rem(16px);
+    &:last-child {
+      margin-right: 0;
+    }
+    @media (max-width: $sm-screen) {
+      margin: 0;
+    }
+  }
+  &__select-md {
+    width: 100%;
+    max-width: rem(240px);
+  }
+  &__select-big {
+    width: 100%;
+    max-width: rem(296px);
+  }
+  &__select-sm {
+    width: 100%;
+    max-width: rem(208px);
+  }
+  &__select-full {
+    @media (max-width: $xxl-screen) {
+      max-width: 100%;
+    }
+    &--mb {
+      @media (max-width: $sm-screen) {
+        margin-bottom: rem(16px);
+      }
+    }
+  }
+  &__button {
+    margin: rem(40px) auto 0 auto;
+    min-width: rem(240px);
+    @media (max-width: $sm-screen) {
+      margin-top: rem(25px);
+    }
+  }
+  &__reset-icon {
+    width: rem(10px);
+    height: rem(10px);
+    margin-left: rem(8px);
+    @include mask-contain-center;
+    mask: url("../../assets/images/icons/cross-grey.svg");
+    -webkit-mask: url("../../assets/images/icons/cross-grey.svg");
+    background: #767676;
+    transition: .2s linear;
+    flex-shrink: 0;
+  }
+  &--rounded {
+    border-radius: rem(4px);
+    padding-bottom: rem(40px);
+    @media (max-width: $sm-screen) {
+      padding-bottom: 30px;
+    }
+  }
+  &__checkboxes {
+    display: flex;
+    align-items: flex-start;
+    flex: 1.3;
+    @media (max-width: $lg-screen) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: rem(16px);
+    }
+    @media (max-width: $sm-screen) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 0;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    @media (max-width: $xxl-screen) {
+      max-width: 100%;
+      width: 100%;
+    }
+    @media (max-width: $sm-screen) {
+      flex-direction: column;
+    }
+    &--grid {
+      @media (max-width: $lg-screen) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: rem(16px);
+      }
+      @media (max-width: $sm-screen) {
+        grid-template-columns: 1fr;
+      }
+    }
+    &--mr {
+      //width: 55%;
+      margin-right: rem(24px);
+      @media (max-width: $xxl-screen) {
+        width: 100%;
+        margin: 0 0 rem(16px) 0;
+      }
+      @media (max-width: $sm-screen) {
+        margin-right: 0;
+      }
+    }
+  }
+  &--hidden {
+    display: none;
+  }
+}

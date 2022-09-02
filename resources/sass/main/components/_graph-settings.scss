@@ -1,0 +1,139 @@
+.graph-settings {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: rem(15px) 0 rem(12px) 0;
+  @media (max-width: $md-screen) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__label {
+    font-size: rem(14px);
+    line-height: 1.71;
+    color: rgba(32, 32, 35, 0.6);
+    @media (max-width: $md-screen) {
+      margin-bottom: rem(12px);
+    }
+  }
+
+  &__types {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: rem(16px);
+    @media (max-width: $sm-screen) {
+      margin: 0 0 rem(16px) 0;
+    }
+  }
+
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(8px);
+    background: #fff;
+    font-size: rem(14px);
+    font-weight: 500;
+    line-height: 1.71;
+    color: $dodger-blue;
+    cursor: pointer;
+
+    border-left: 1px solid $dodger-blue;
+    border-top: 1px solid $dodger-blue;
+    border-bottom: 1px solid $dodger-blue;
+
+    &:first-child {
+      border-radius: rem(4px) 0 0 rem(4px);
+    }
+
+    &:last-child {
+      border-right: 1px solid $dodger-blue;
+      border-radius: 0 rem(4px) rem(4px) 0;
+    }
+
+    &.active {
+      background: $dodger-blue;
+      color: #fff;
+
+      .graph-settings__type-icon {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__type-icon {
+    width: rem(24px);
+    height: rem(24px);
+    object-fit: contain;
+    margin-right: rem(12.5px);
+    @media (max-width: $sm-screen) {
+      width: rem(20px);
+      height: rem(20px);
+    }
+  }
+
+  &__scale {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    @include flex-row-center;
+    width: rem(40px);
+    height: rem(40px);
+    border-radius: rem(4px);
+    background-color: $light-grey;
+    transition: .2s linear;
+
+    span {
+      font-size: rem(28px);
+      line-height: 0.86;
+      color: $dodger-blue;
+    }
+
+    &:hover {
+      background-color: $light-grey-hover;
+    }
+  }
+
+  &__range-wrap {
+    width: rem(84px);
+    margin: 0 2px;
+
+    .irs--flat .irs-bar {
+      height: rem(5px);
+      background: transparent;
+    }
+
+    .irs--flat .irs-line {
+      height: rem(5px);
+      background-color: $light-grey;
+      top: rem(10px);
+    }
+
+    .irs--flat {
+      height: rem(20px);
+    }
+
+    .irs--flat .irs-handle {
+      background: url("../../assets/images/icons/rectangle.svg") center /contain no-repeat;
+      width: rem(10px);
+      height: rem(18px);
+      top: rem(4px);
+      cursor: pointer;
+
+      i {
+        display: none;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    @media (max-width: $sm-screen) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/node_modules
+/public/hot
+/public/storage
+/public/phpunit
+/storage/*.key
+/vendor
+# /parser
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+composer.lock
+package-lock.json
+# /public/assets/ckeditor
+/public/assets/ckeditor/skins/kama
+/public/assets/ckeditor/skins/moono
+/public/assets/ckeditor/skins/moono-lisa
+# /resources/sass/dashboard/sb-admin-2
+# /resources/js/dashboard/sb-admin-2.js
+.env.example

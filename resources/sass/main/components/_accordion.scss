@@ -1,0 +1,79 @@
+.accordion {
+  background: #F7F8FA;
+  box-shadow: 0 rem(1px) 0 #DFE0E3;
+  border-radius: rem(10px);
+  overflow: hidden;
+  &--active {
+    .accordion__item {
+      background: #E6EEFF;
+    }
+    .accordion__arrow {
+      background: #2579F2;
+      transform: rotate(270deg);
+    }
+    .accordion__content {
+      opacity: 1;
+    }
+    .accordion__name {
+      color: #2579F2;
+    }
+  }
+  &__item {
+    padding: rem(9px) rem(16px);
+    background: #F7F8FA;
+    box-shadow: 0 rem(1px) 0 #DFE0E3;
+    border-radius: rem(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: rem(18px);
+    line-height: 222%;
+    color: #8F8F91;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    @media (max-width: $md-screen) {
+      font-size: rem(16px);
+    }
+    @media (max-width: $sm-screen) {
+      font-size: rem(14px);
+      line-height: 160%;
+    }
+  }
+  &__arrow {
+    width: rem(10px);
+    height: rem(17px);
+    object-fit: contain;
+    flex-shrink: 0;
+    transform: rotate(90deg);
+    @include mask-contain-center;
+    mask: url("../../assets/images/icons/arrow-slider.svg");
+    -webkit-mask: url("../../assets/images/icons/arrow-slider.svg");
+    background: #8F8F91;
+    transition: transform 0.25s ease-out;
+    margin-left: rem(10px);
+    @media (max-width: $sm-screen) {
+      width: rem(8px);
+      height: rem(14px);
+    }
+  }
+  &__desc {
+    font-size: rem(14px);
+    line-height: 171%;
+    color: $black;
+    padding: rem(11px) rem(16px) rem(22px) rem(16px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(12px);
+    }
+  }
+  &__content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all 0.25s ease-out;
+  }
+}

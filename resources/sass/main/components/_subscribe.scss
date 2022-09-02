@@ -1,0 +1,58 @@
+.subscribe{
+  padding: rem(40px) rem(40px) rem(40px) rem(520px);
+  border-radius: 0 rem(20px) rem(20px) rem(20px);
+  background: url("../assets/images/subscribe-back.svg") center /cover no-repeat;
+  @media (max-width: $xxl-screen) {
+    padding-left: rem(400px);
+  }
+  @media (max-width: $xl-screen) {
+    padding-left: rem(250px);
+  }
+  @media (max-width: $lg-screen) {
+    padding-left: rem(40px);
+    background: $shark;
+  }
+  @media (max-width: $sm-screen) {
+    padding: rem(30px) rem(20px);
+  }
+  &__title {
+    font-size: rem(24px);
+    font-weight: 500;
+    line-height: 1.58;
+    color: $white;
+    margin-bottom: rem(24px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(20px);
+      margin-bottom: rem(18px);
+    }
+  }
+  &__text {
+    font-size: rem(14px);
+    line-height: 1.71;
+    margin-bottom: rem(31px);
+    color: rgba(255, 255, 255, 0.7);
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    @media (max-width: $sm-screen) {
+      flex-direction: column;
+    }
+  }
+  &__input {
+    max-width: rem(320px);
+    margin-right: rem(16px);
+    @media (max-width: $sm-screen) {
+      max-width: 100%;
+      margin: 0 0 rem(16px) 0;
+      padding: rem(10px) rem(16px);
+    }
+  }
+  &__button {
+    width: 100%;
+    max-width: rem(200px);
+    @media (max-width: $sm-screen) {
+      max-width: 100%;
+    }
+  }
+}

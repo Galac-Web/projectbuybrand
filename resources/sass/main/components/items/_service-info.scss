@@ -1,0 +1,183 @@
+.service-info {
+  display: grid;
+  grid-template-columns: rem(324px) 1fr;
+  grid-gap: rem(32px);
+  @media (max-width: $md-screen) {
+    grid-template-columns: 1fr;
+    grid-gap: rem(26px);
+  }
+  @media (max-width: $sm-screen) {
+    grid-gap: rem(20px);
+  }
+  &--left {
+    grid-template-columns: 1fr rem(324px);
+    @media (max-width: $md-screen) {
+      grid-template-columns:  1fr;
+      grid-gap: rem(26px);
+      .service-info__box {
+        order: -1;
+      }
+    }
+  }
+  &--full {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: initial;
+    display: block;
+    .service-info__box {
+      position: relative;
+      z-index: 1;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.82) 0%, rgba(196, 196, 196, 0) 100%);
+        z-index: -1;
+      }
+    }
+  }
+  &--col {
+    .service-info__box {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &--small {
+    display: block;
+
+    .service-info__box {
+      height: rem(184px);
+      @media (max-width: $sm-screen) {
+        height: rem(150px);
+      }
+    }
+  }
+  &__box {
+    padding: rem(19px) rem(16px);
+    height: rem(300px);
+    position: relative;
+    border-radius: rem(10px);
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: block;
+    @media (max-width: $md-screen) {
+      height: rem(260px);
+    }
+    @media (max-width: $sm-screen) {
+      height: rem(200px);
+      padding: rem(14px) rem(16px);
+    }
+  }
+  &__name {
+    line-height: rem(30px);
+    padding: rem(7px) rem(7px) rem(7px) rem(14px);
+    background: rgba(247, 248, 250, 0.5);
+    border-radius: rem(10px);
+    display: inline-block;
+    margin-bottom: rem(19px);
+    @media (max-width: $sm-screen) {
+      line-height: rem(24px);
+    }
+    &--small {
+      font-weight: 500;
+      font-size: rem(14px);
+      line-height: rem(24px);
+      background: $white;
+      padding: rem(3px) rem(20px);
+      border-radius: rem(4px);
+      margin: auto 0 0 auto;
+      min-width: rem(160px);
+      text-align: center;
+    }
+  }
+  &__description {
+    white-space: pre-wrap;
+    font-family: inherit;
+    text-align: left;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    margin-bottom: rem(22px);
+  }
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: rem(-5px);
+  }
+  &__tag {
+    font-weight: 500;
+    font-size: rem(13px);
+    line-height: rem(13px);
+    padding: rem(3.5px) rem(11px);
+    background: #3384F7;
+    border-radius: rem(4px);
+    color: $white;
+    margin: 0 rem(16px) rem(5px) 0;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.red {
+      background: #F75633;
+    }
+    &.green {
+      background: #5AC806;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__button {
+    display: inline-flex;
+    width: auto;
+    padding: rem(11px) rem(17px);
+    margin-top: auto;
+    margin-left: auto;
+    &--left {
+      margin-left: initial;
+      margin-right: auto;
+    }
+    @media (max-width: $md-screen) {
+      margin-right: auto;
+      margin-left: initial;
+    }
+    &--mt-auto {
+      margin: auto 0 0 0;
+      min-width: rem(148px);
+    }
+  }
+  &--mb {
+    margin-bottom: rem(28px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__text {
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: $black;
+    max-width: rem(535px);
+    margin-bottom: rem(24px);
+    @media (max-width: $sm-screen) {
+      font-size: rem(14px);
+    }
+  }
+  &__logo {
+    width: rem(80px);
+    height: rem(80px);
+    background: $white;
+    @media (max-width: $sm-screen) {
+      width: rem(60px);
+      height: rem(60px);
+    }
+  }
+}

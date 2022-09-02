@@ -1,0 +1,64 @@
+.info-panel {
+  padding: rem(10px) 0 rem(12px) 0;
+  @media (max-width: $xl-screen) {
+    border-bottom: solid 1px rgba(32, 32, 35, 0.15);
+  }
+  @media (max-width: $sm-screen) {
+    padding: rem(8px) 0;
+  }
+  &__inner {
+    @include flex-row-between;
+  }
+  &__box {
+    @include flex-row;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  &__btn {
+    min-width: rem(232px);
+    @media (max-width: $md-screen) {
+      display: none;
+    }
+  }
+  &__wrapper {
+    display: block;
+    //width: 100%;
+    //max-width: rem(584px);
+    width: 100%;
+    max-width: rem(584px);
+    margin-right: rem(32px);
+    @media (max-width: $lg-screen) {
+      max-width: 100%;
+    }
+    @media (max-width: $md-screen) {
+      margin-right: 0;
+    }
+  }
+  &__tags {
+    @include flex-row;
+    flex-wrap: wrap;
+  }
+  &__tag {
+    font-size: rem(13px);
+    line-height: 1.85;
+    color: $blue;
+    margin-right: rem(16px);
+    transition: .2s linear;
+    span {
+      text-decoration: underline;
+    }
+    &:hover {
+      color: $blue-hover;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__logo {
+    flex-shrink: 0;
+    margin-right: rem(24px);
+    @media (max-width: $lg-screen) {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.post-item {
+  display: flex;
+  background: #F7F8FA;
+  box-shadow: 0 rem(1px) 0 #DFE0E3;
+  border-radius: rem(10px);
+  @media (max-width: $sm-screen) {
+    flex-direction: column;
+  }
+  &--blue {
+    background: rgba(51, 132, 247, 0.15);
+    .post-item__user{
+      background: linear-gradient(0deg, rgba(51, 132, 247, 0.1), rgba(51, 132, 247, 0.1)), #FFFFFF;
+    }
+    .post-item__el {
+      background: linear-gradient(0deg, rgba(51, 132, 247, 0.15), rgba(51, 132, 247, 0.15)), #FFFFFF;
+    }
+  }
+  &--dark {
+    background: #EBECEF;
+    .post-item__user{
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04)), #FFFFFF;
+    }
+    .post-item__el {
+      background: #EBECEF;
+    }
+  }
+  &__avatar {
+    width: rem(64px);
+    height: rem(64px);
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__user {
+    padding: rem(16px) rem(16px) rem(19px) rem(16px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)), #FFFFFF;
+    border-radius: rem(10px) 0 0 rem(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: $black;
+    margin-bottom: rem(5px);
+  }
+  &__position {
+    padding: rem(1.5px) rem(8px) rem(2.5px) rem(8px);
+    background: #5AC806;
+    border-radius: rem(4px);
+    font-weight: 500;
+    font-size: rem(13px);
+    line-height: rem(16px);
+    color: #FFFFFF;
+    display: inline-flex;
+    margin-bottom: rem(24px);
+  }
+  &__el {
+    padding: rem(5px) rem(24px);
+    background: #F7F8FA;
+    border-radius: rem(5px);
+    margin-bottom: rem(8px);
+    font-size: rem(14px);
+    line-height: rem(24px);
+    color: $black;
+    flex-wrap: wrap;
+    max-width: rem(172px);
+    text-align: center;
+    span {
+      margin-left: rem(15px);
+      font-weight: 500;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__info {
+    padding: rem(17px) rem(16px) rem(16px) rem(24px);
+    font-weight: 500;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    @media (max-width: $sm-screen) {
+      padding: rem(16px) rem(12px);
+    }
+  }
+  &__text {
+    white-space: pre-wrap;
+    font-weight: 500;
+    font-family: inherit;
+    margin-bottom: rem(22px);
+    font-size: rem(14px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(18px);
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+  &__date {
+    font-size: rem(12px);
+    line-height: rem(15px);
+    color: #79797B;
+  }
+  &__button {
+    margin-right: rem(15px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

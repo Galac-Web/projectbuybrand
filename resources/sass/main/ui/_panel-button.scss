@@ -1,0 +1,34 @@
+.panel-button {
+  flex-shrink: 0;
+  width: rem(32px);
+  height: rem(32px);
+  background: rgba(32, 32, 35, 0.05);
+  border-radius: rem(4px);
+  transition: .2s linear;
+  @include flex-row-center;
+
+  &:hover {
+    background: rgba(32, 32, 35, 0.15);
+  }
+
+  &__icon {
+    width: rem(20px);
+    height: rem(20px);
+    background: $black;
+    @include mask-contain-center;
+    display: block;
+    &--star {
+      mask: url("../../assets/images/icons/star-of-favorites-outline.svg");
+      -webkit-mask: url("../../assets/images/icons/star-of-favorites-outline.svg");
+    }
+
+    &--dots {
+      mask: url("../../assets/images/icons/others.svg");
+      -webkit-mask: url("../../assets/images/icons/others.svg");
+    }
+    &--answers {
+      mask: url("../../assets/images/icons/answers.svg");
+      -webkit-mask: url("../../assets/images/icons/answers.svg");
+    }
+  }
+}

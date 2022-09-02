@@ -1,0 +1,196 @@
+
+
+.franchises {
+  @media (max-width: $lg-screen) {
+    margin-bottom: rem(34px);
+  }
+  &__table {
+    width: 100%;
+    border-radius: rem(4px);
+    table-layout: fixed;
+    column-gap: rem(32px);
+    border: solid 1px #e3e5ed;
+
+    td {
+      vertical-align: top;
+    }
+
+    thead, tbody { display: block; }
+    tbody {
+      margin-right: rem(3px);
+      height: rem(800px);
+      overflow-y: auto;
+      overflow-x: hidden;
+        &::-webkit-scrollbar {
+          width: rem(4px);
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #d1d7e0;
+          border-radius: rem(3px);
+        }
+    }
+    @media (max-width: $lg-screen) {
+      width: rem(938px);
+    }
+  }
+  &__logo {
+    object-fit: contain;
+    width: rem(80px);
+    height: rem(40px);
+    margin: 0 auto;
+  }
+  &__table-row {
+    border-bottom: solid 1px #e3e5ed;
+    text-align: left;
+    &:first-child {
+      padding-left: rem(8px);
+    }
+    &:last-child {
+      padding-right: rem(8px);
+    }
+    padding: rem(8px) 0 rem(11px) 0;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  &__table-box {
+    border-bottom: 1px red;
+    padding: rem(19px) rem(24px) rem(8px) 0;
+    &:last-child {
+      padding-right: 0;
+    }
+    &:first-child {
+      padding-left: rem(8px);
+    }
+  }
+  &__table-row-1 {
+    width: 12%;
+  }
+  &__table-row-2 {
+    width: 15%;
+  }
+  &__table-row-3 {
+    width: 28.4%;
+  }
+  &__table-row-4 {
+    width: 12%;
+  }
+  &__table-5 {
+    width: 18%;
+  }
+  &__table-6 {
+    width: 15%;
+  }
+  &__table-number {
+    color: #fff;
+    @include flex-row-center;
+    width: rem(32px);
+    height: rem(32px);
+    border-radius: rem(4px);
+    background-color: #033a8f;
+    margin: 0 auto;
+    font-size: rem(20px);
+    font-weight: 500;
+    &--green {
+      background-color: $green;
+    }
+    &--olive {
+      background-color: $rio-grande;
+    }
+    &--blue {
+      background-color: $dodger-blue;
+    }
+  }
+  &__title {
+    display: block;
+    font-size: rem(16px);
+    line-height: 1.5;
+    letter-spacing: rem(-0.2px);
+    color: $dodger-blue;
+    margin-bottom: rem(8px);
+  }
+  &__desc {
+    font-size: rem(14px);
+    color: rgba(32, 32, 35, 0.7);
+  }
+  &__text {
+    font-size: rem(14px);
+    line-height: 1.71;
+    color: $black;
+    &--green {
+      color: $limeade;
+    }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    position: relative;
+    @include flex-row-center;
+    width: rem(32px);
+    height: rem(32px);
+    border-radius: rem(4px);
+    background-color: $athens-gray;
+    margin-right: rem(16px);
+    transition: .2s linear;
+    &:hover {
+      background-color: $athens-gray-hover;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__row {
+    display: inline;
+    flex-wrap: wrap;
+  }
+  &__badges {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../assets/images/icons/store-new-badges.svg") center /contain no-repeat;
+    width: rem(25px);
+    height: rem(25px);
+    font-size: rem(13px);
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Euclid-Circular-B', sans-serif;
+  }
+  &__item-notification {
+    width: rem(10px);
+    height: rem(10px);
+    border-radius: 50%;
+    background-color: $limeade;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+  }
+  &__overhead {
+    @media (max-width: $md-screen) {
+      margin-bottom: rem(16px);
+    }
+  }
+  &__search {
+    margin: 0 0 rem(8px) auto;
+    max-width: rem(392px);
+    @media (max-width: $sm-screen) {
+      max-width: 100%;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    overflow-x: auto;
+    @media (max-width: $lg-screen) {
+      margin-right: rem(-20px);
+    }
+    @media (max-width: $sm-screen) {
+      margin-right: rem(-10px);
+    }
+  }
+}

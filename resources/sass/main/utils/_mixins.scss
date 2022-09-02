@@ -1,0 +1,46 @@
+@mixin flex-row {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin mask-contain-center {
+  mask-repeat: no-repeat !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-position: center center !important;
+  -webkit-mask-position: center center !important;
+  mask-size: contain !important;
+  -webkit-mask-size: contain !important;
+}
+
+@mixin scroll-hidden {
+  &::-webkit-scrollbar {
+    width: 0;
+    padding-bottom: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+}
+
+@mixin icon-size {
+  width: rem(24px);
+  height: rem(24px);
+}

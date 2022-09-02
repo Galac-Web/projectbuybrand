@@ -1,0 +1,44 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@chenfengyuan/datepicker": "^1.0.10",
+        "@ttskch/select2-bootstrap4-theme": "^1.5.2",
+        "@vue/compiler-sfc": "^3.2.20",
+        "axios": "^0.21.4",
+        "bootstrap": "^4.6.0",
+        "ckeditor4": "^4.16.2",
+        "cropperjs": "^1.5.12",
+        "cross-env": "^7.0.3",
+        "datatables.net-bs4": "^1.11.3",
+        "inputmask": "^5.0.5",
+        "ion-rangeslider": "^2.3.1",
+        "jquery": "^3.6.0",
+        "jquery-countdown": "^2.2.0",
+        "jquery.easing": "^1.4.1",
+        "laravel-mix": "^6.0.32",
+        "lodash": "^4.17.21",
+        "perfect-scrollbar": "^1.5.3",
+        "popper.js": "^1.16",
+        "postcss": "^8.3.9",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.32.13",
+        "sass-loader": "^11.0.1",
+        "select2": "^4.0.13",
+        "swiper": "^7.2.0",
+        "vue": "^3.2.20",
+        "vue-loader": "^16.8.1",
+        "vue-template-compiler": "^2.6.14"
+    },
+    "dependencies": {
+        "vue3-select2-component": "^0.1.7"
+    }
+}

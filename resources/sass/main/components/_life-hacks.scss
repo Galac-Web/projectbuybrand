@@ -1,0 +1,16 @@
+.life-hacks {
+  &__title {
+    margin-bottom: rem(21px);
+  }
+  &__tabs {
+    padding: 0 rem(16px);
+    margin: 0 0 rem(32px) 0;
+    .tabs__item {
+      width: auto;
+      min-width: rem(160px);
+    }
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(24px);
+    }
+  }
+}

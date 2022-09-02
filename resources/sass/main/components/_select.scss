@@ -1,0 +1,46 @@
+.select {
+  &__item {
+    width: 100%;
+  }
+  .select2-selection--single {
+    border-radius: rem(4px);
+    background-color: #fff;
+    border: solid 1px #e3e5ed;
+    height: rem(40px);
+  }
+  .select2-container {
+    width: 100% !important;
+  }
+  .select2-selection__rendered {
+    line-height: rem(40px) !important;
+    padding: 0 rem(35px) 0 rem(16px) !important;
+    font-size: rem(14px);
+    color: $black !important;
+  }
+  .select2-selection__arrow {
+    width: rem(24px) !important;
+    height: rem(24px) !important;
+    border-radius: rem(4px);
+    background-color: transparent;
+    @include flex-row-center;
+    right: rem(8px) !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    &::after {
+      content: '';
+      background: url("../../assets/images/icons/icons-arrow-select.svg") center /contain no-repeat;
+      width: rem(24px);
+      height: rem(24px);
+    }
+    b {
+      display: none;
+    }
+  }
+  .select2-container--open {
+    .select2-selection__arrow {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

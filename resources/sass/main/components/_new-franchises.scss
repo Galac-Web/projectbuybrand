@@ -1,0 +1,6 @@
+.new-franchises {
+  padding-bottom: rem(56px);
+  @media (max-width: $sm-screen) {
+    padding-bottom: rem(38px);
+  }
+}

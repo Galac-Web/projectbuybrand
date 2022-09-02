@@ -1,0 +1,12 @@
+.rating {
+  &__ages {
+    margin-bottom: rem(24px);
+  }
+  &__filters {
+    margin-bottom: rem(16px);
+    @media (max-width: $lg-screen) {
+      margin-bottom: rem(24px);
+    }
+  }
+
+}

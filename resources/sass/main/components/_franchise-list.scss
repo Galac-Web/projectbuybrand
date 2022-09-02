@@ -1,0 +1,14 @@
+.franchise-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: rem(16px);
+  @media (max-width: $md-screen) {
+    grid-template-columns: 1fr;
+  }
+  &--big {
+    grid-column: 1/3;
+    @media (max-width: $md-screen) {
+      grid-column: initial;
+    }
+  }
+}

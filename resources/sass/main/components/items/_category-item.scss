@@ -1,0 +1,26 @@
+.category-item {
+  min-height: rem(50px);
+  display: flex;
+  border-radius: rem(4px);
+  .checkbox__label {
+    line-height: rem(19px);
+  }
+  background: #F7F8FA;
+  .checkbox__square {
+    margin-right: rem(16px);
+  }
+  &__inner {
+    padding: rem(6px) rem(16px);
+  }
+  &__count {
+    margin-left: auto;
+    font-size: rem(14px);
+    line-height: rem(19px);
+    color: $black;
+    padding: rem(9px);
+    background: rgba(32, 32, 35, 0.05);
+    border-radius: 0 rem(4px) rem(4px) 0;
+    @include flex-row-center;
+    min-width: rem(36px);
+  }
+}

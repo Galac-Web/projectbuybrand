@@ -1,0 +1,9 @@
+[production]
+last 3 versions
+safari >= 4
+
+[development]
+last 1 version
+
+[ssr]
+node 12

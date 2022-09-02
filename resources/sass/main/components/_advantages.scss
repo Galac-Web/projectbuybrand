@@ -1,0 +1,57 @@
+.advantages {
+  padding: rem(68px) 0;
+  background: #F7FAFD;
+  @media (max-width: $sm-screen) {
+    padding: rem(40px) 0;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(45px);
+    @media (max-width: $lg-screen) {
+      grid-gap: rem(34px);
+    }
+    @media (max-width: $md-screen) {
+      grid-template-columns: 1fr;
+    }
+    @media (max-width: $sm-screen) {
+      grid-gap: rem(24px);
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__icon {
+    width: rem(100px);
+    height: auto;
+    flex-shrink: 0;
+    margin-right: rem(22px);
+    object-fit: contain;
+    @media (max-width: $xl-screen) {
+      width: rem(70px);
+    }
+    @media (max-width: $lg-screen) {
+      width: rem(60px);
+    }
+    @media (max-width: $sm-screen) {
+      width: rem(40px);
+      margin-right: rem(20px);
+    }
+  }
+  &__name {
+    margin-bottom: rem(7px);
+  }
+  &__list, &__desc {
+    font-size: rem(16px);
+    line-height: rem(36px);
+    color: $black;
+    @media (max-width: $sm-screen) {
+      font-size: rem(14px);
+      line-height: 180%;
+    }
+  }
+  &__list {
+    margin-left: rem(20px);
+  }
+}

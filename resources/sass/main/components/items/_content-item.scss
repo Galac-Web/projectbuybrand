@@ -1,0 +1,31 @@
+.content-item {
+  padding: 0 rem(16px);
+  @media (max-width: $sm-screen) {
+    padding: 0;
+  }
+  &__link {
+    display: block;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: $dodger-blue;
+    margin-bottom: rem(14px);
+  }
+  &__date {
+    font-size: rem(12px);
+    line-height: rem(15px);
+    margin-bottom: rem(16px);
+    color: #79797B;
+  }
+  &__img {
+    max-height: rem(140px);
+    width: 100%;
+    margin-bottom: rem(16px);
+    object-fit: cover;
+    border-radius: rem(5px);
+  }
+  &__desc {
+    font-size: rem(16px);
+    line-height: rem(28px);
+    margin-bottom: rem(8px);
+  }
+}

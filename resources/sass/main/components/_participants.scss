@@ -1,0 +1,14 @@
+.participants {
+  padding: rem(72px) 0 rem(56px) 0;
+  @media (max-width: $sm-screen) {
+    padding: rem(40px) 0 rem(30px) 0;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: rem(28px);
+    @media (max-width: $xl-screen) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

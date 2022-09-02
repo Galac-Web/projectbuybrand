@@ -1,0 +1,15 @@
+.franchise-chapter {
+  padding-bottom: rem(81px) !important;
+  @media (max-width: $sm-screen) {
+    padding-bottom: rem(56px) !important;
+  }
+  &__log-in {
+    margin-bottom: rem(30px);
+  }
+  &__theme-filter {
+    margin-bottom: rem(33px);
+  }
+  &__mob-app {
+    margin-bottom: rem(34px);
+  }
+}

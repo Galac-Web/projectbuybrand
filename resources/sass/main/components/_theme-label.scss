@@ -1,0 +1,26 @@
+.theme-label {
+  margin-bottom: rem(16px);
+  background: rgba(32, 32, 35, 0.1);
+  box-shadow: 0 rem(1px) 0 #DFE0E3;
+  border-radius: rem(10px);
+  display: flex;
+  align-items: flex-end;
+  padding: rem(14px) rem(16px);
+  @media (max-width: $sm-screen) {
+    flex-direction: column;
+    align-items: center;
+    padding: rem(10px) rem(14px);
+  }
+  &__title {
+    color: rgba(32, 32, 35, 0.7);
+    margin-right: rem(20px);
+    @media (max-width: $sm-screen) {
+      margin: 0 0 rem(5px) 0;
+    }
+  }
+  &__info {
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: rgba(32, 32, 35, 0.7);
+  }
+}

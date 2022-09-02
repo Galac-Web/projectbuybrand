@@ -1,0 +1,93 @@
+.mob-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: rem(59px);
+  bottom: 0;
+  left: 0;
+  background: $white;
+  padding: rem(20px) rem(20px) rem(30px) rem(20px);
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s linear;
+  transform: translateX(100%);
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  @media (max-width: $xl-screen) {
+    display: flex;
+  }
+  @media (max-width: $sm-screen) {
+    padding: rem(8px) rem(16px) rem(36px) rem(16px);
+  }
+  &__section {
+    font-size: rem(20px);
+    font-weight: 500;
+    color: $black;
+    line-height: 3.13;
+    display: flex;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    @media (max-width: $sm-screen) {
+      font-size: rem(16px);
+    }
+  }
+  &__arrow {
+    flex-shrink: 0;
+    width: rem(20px);
+    height: rem(12px);
+    margin-right: rem(24px);
+    background: $black;
+    mask: url("../../assets/images/icons/bottom-chevron.svg");
+    -webkit-mask: url("../../assets/images/icons/bottom-chevron.svg");
+    @include mask-contain-center;
+    @media (max-width: $sm-screen) {
+      margin-right: rem(17px);
+      width: rem(14.4px);
+      height: rem(8px);
+    }
+  }
+  &__button {
+    margin-top: auto;
+  }
+  &__list {
+    margin: 0 0 rem(8px) rem(44px);
+    display: none;
+  }
+  &__link {
+    font-size: rem(18px);
+    line-height: 2.3;
+    color: $black;
+    display: block;
+    @media (max-width: $sm-screen) {
+      font-size: rem(14px);
+      line-height: 2.29;
+    }
+  }
+  &__box {
+    &.open {
+      .mob-menu__section {
+        color: $dodger-blue;
+      }
+      .mob-menu__arrow {
+        transform: rotate(180deg);
+        background: $dodger-blue;
+      }
+      .mob-menu__list {
+        display: block;
+      }
+    }
+  }
+  &__inner {
+    height: calc(100vh - 11.875rem);
+    overflow-y: auto;
+    @media (max-width: $sm-screen) {
+      height: calc(100vh - 11rem);
+    }
+  }
+}
