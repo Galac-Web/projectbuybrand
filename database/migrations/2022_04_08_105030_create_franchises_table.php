@@ -13,6 +13,8 @@ class CreateFranchisesTable extends Migration
             $table->foreignId('owner_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('type_id')->constrained('franchises_types')->onDelete('cascade');
             $table->string('name');
+            $table->string('inn')->nullable();
+            $table->string('counranting')->nullable();
             $table->string('slug')->unique();
             $table->boolean('is_active')->default(0);
             $table->year('foundation_year')->comment('Год основания');
