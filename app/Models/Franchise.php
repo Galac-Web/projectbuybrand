@@ -41,7 +41,7 @@ class Franchise extends Model implements HasMedia
     protected $table = 'franchises';
 
     protected $fillable = [
-        'owner_id', 'type_id', 'name', 'slug', 'is_active', 'foundation_year', 'start_year',
+        'owner_id', 'type_id', 'name','inn','counranting','slug', 'is_active', 'foundation_year', 'start_year',
         // TODO REMOVE
         'region_start',
     ];
