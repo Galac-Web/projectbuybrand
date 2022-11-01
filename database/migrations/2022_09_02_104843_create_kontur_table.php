@@ -15,10 +15,16 @@ class CreateKonturTable extends Migration
     {
         Schema::create('kontur', function (Blueprint $table) {
             $table->id();
-            $table->string('public');
-            $table->date('regData');
-            $table->string('regtradmark');
-            $table->string('lawsuits');
+            $table->string('public')->nullable();
+            $table->string('regData')->nullable();
+            $table->string('regtradmark')->nullable();
+            $table->string('lawsuits')->nullable();
+            $table->integer('anakitikcount')->nullable();
+            $table->integer('anakitikcountNote')->nullable();
+            $table->integer('anakitikcountWin')->nullable();
+            $table->integer('anakitikcountLose')->nullable();
+            $table->integer('anakitikexec')->nullable();
+            $table->integer('franchise_id')->nullable();
             $table->timestamps();
         });
     }

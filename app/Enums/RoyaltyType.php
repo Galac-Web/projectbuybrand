@@ -10,4 +10,5 @@ final class RoyaltyType extends Enum
     public const FIXED   = 2;
     public const RANGE   = 3;
     public const PERCENT = 4;
+    public const data = 5;
 }

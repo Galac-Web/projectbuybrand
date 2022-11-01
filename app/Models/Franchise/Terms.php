@@ -35,8 +35,6 @@ class Terms extends Model
             ->map(fn ($id, $name) => (object) [
                 'id' => $id,
                 'name' => trans('royalty_types.' . strtolower($name)),
-            ])
-            ->values()
-            ->toArray();
+            ])->values()->toArray();
     }
 }

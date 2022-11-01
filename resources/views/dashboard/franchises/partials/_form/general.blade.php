@@ -59,8 +59,8 @@
         <input type="number" max="{{ date('Y') }}" maxlength="4" name="start_year" id="start_year" value="{{ optional($franchise)->start_year }}" class="form-control" placeholder="@lang('Start Year')">
     </div>
     <div class="col-md-1">
-        <label for="start_year">ИНН</label>
-        <input type="number"  name="inn" id="start_year" value="inn" class="form-control" >
+        <label for="inn">ИНН</label>
+        <input type="number"  name="inn" id="inn" value="{{ optional($franchise)->inn }}"  class="form-control" >
     </div>
     <div class="col-md-2">
         <label for="region_of_start">Регион начала развития</label>

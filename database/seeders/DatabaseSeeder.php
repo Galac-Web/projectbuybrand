@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TagsTableSeeder::class);
         $this->call(MediaTypesTableSeeder::class);
         $this->call(MediaTableSeeder::class);
+        $this->call(CalcstaticdateSeeder::class);
 
         // GEO
         $this->call(CountriesTableSeeder::class);
@@ -35,6 +36,6 @@ class DatabaseSeeder extends Seeder
 
     public function dev()
     {
-        
+
     }
 }

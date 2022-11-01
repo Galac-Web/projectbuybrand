@@ -12,7 +12,7 @@ class KonturController extends Controller
         $arrayvalidator = ValidatorController::validator($type,$inn);
         if(count($arrayvalidator) > 0){
             $resultanalytic = KonturController::runContent($arrayvalidator,'3208d29d15c507395db770d0e65f3711e40374df',$inn);
-            dd($resultanalytic);
+            return $resultanalytic;
         }
 
 
@@ -32,9 +32,13 @@ class KonturController extends Controller
                         break;
                     case "req":
                         $regData = KonturController::reg($res);
+                        $publicCompani = KonturController::publickompany($res);
                         break;
                     case "briefReport":
                         $briefReport = KonturController::getKonturLights($res);
+                        break;
+                    case "petitionersOfArbitration":
+                        $briefReport = KonturController::petitionersOfArbitration($res);
                         break;
 
                 }
@@ -45,9 +49,21 @@ class KonturController extends Controller
         return [
             'analityk'=>$analitik,
             'regdata'=>$regData,
+            'publickcompani'=>$publicCompani,
             'brifReports'=>$briefReport,
         ];
     }
+
+    public function petitionersOfArbitration($res){
+        if ($res[0]) {
+            //$file = $_SERVER['DOCUMENT_ROOT'].'/public/doc/'.rand(1,99999).'_finance.pdf';
+            //file_put_contents($file,$res);
+            //return $file;
+        }
+        return '';
+    }
+
+
     public function filecree($res){
         if ($res[0]) {
             //$file = $_SERVER['DOCUMENT_ROOT'].'/public/doc/'.rand(1,99999).'_finance.pdf';
@@ -59,24 +75,32 @@ class KonturController extends Controller
 
     public function analitickontur($res){
         if ($res[0]) {
-            $count = intval($res[0]["analytics"]["q2002"]) + intval($res[0]["analytics"]["q2004"]);
+            $count = intval($res[0]["analytics"]["q2002"]) + intval($res[0]["analytics"]["q2004"])+intval($res[0]["analytics"]["q2004"]);
             $countNotEnd = intval($res[0]["analytics"]["q2014"]) + intval($res[0]["analytics"]["q2024"]);
             $countWin = intval($res[0]["analytics"]["q2023"]) + intval($res[0]["analytics"]["q2022"]);
             $countLose = intval($res[0]["analytics"]["q2011"]) + intval($res[0]["analytics"]["q2012"]);
             $exec = intval($res[0]["analytics"]["q1001"]);
+            $tovar = intval($res[0]["analytics"]["q9001"]);
+            $credit = intval($res[0]["analytics"]["6014"]);
             return [
                 'count'=>$count,
                 'countNote'=>$countNotEnd,
                 'countWin'=>$countWin,
                 'countLose'=>$countLose,
-                'exec'=> $exec
+                'exec'=> $exec,
+                'tovar'=>$tovar,
+                'credit'=>$credit
             ];
         }
     }
     public function reg($res){
         if ($res[0]) {
             $regDate = explode('-',$res[0]['UL']['registrationDate']);
-            return $regDate;
+            $ao = explode('-',$res[0]['UL']['opf']);
+            return [
+                'regdata'=>$regDate,
+                'ao'=>$ao
+            ];
         }
     }
 
@@ -241,5 +265,14 @@ class KonturController extends Controller
         }
     }
 
+    public function publickompany($res){
+        $result = '';
+        if($res[0]['UL']['opf'] == 'Публичные акционерные общества'){
+            $result = true;
+        }else{
+            $result = false;
+        }
+        return $result;
+    }
 
 }

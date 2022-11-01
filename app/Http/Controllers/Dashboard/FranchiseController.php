@@ -9,13 +9,17 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\FranchiseSaveRequest;
 use App\Models\Franchise;
 use App\Models\Franchise\Advantage;
+use App\Models\Franchise\Surveyor;
 use App\Models\Franchise\Badge;
 use App\Models\Franchise\Category;
+use App\Models\Franchise\CountRating;
 use App\Models\Franchise\Support;
 use App\Models\Franchise\Terms;
 use App\Models\Franchise\Type;
 use App\Models\User;
 use App\Traits\Controllers\Dashboard;
+use App\Http\Controllers\Dashboard\KonturController;
+use App\Http\Controllers\Dashboard\FuctionCountController;
 use Illuminate\Http\Request;
 
 class FranchiseController extends Controller
@@ -32,6 +36,7 @@ class FranchiseController extends Controller
 
     public function form(?Franchise $franchise = null)
     {
+
         return $this->dashboard->form('dashboard.franchises', [
             'advantages' => Advantage::get(),
             'types' => Type::get(),
@@ -43,20 +48,26 @@ class FranchiseController extends Controller
             'supports' => Support::with('group')->get()->groupBy('group.name'),
             'franchise' => $franchise,
             'video_drivers' => $this->video->getDrivers(),
+
         ]);
     }
 
     public function save(FranchiseSaveRequest $request, FranchiseSaveAction $action)
     {
         /** @var \App\Models\Franchise $franchise */
+        FuctionCountController::index();
+
+        /*
+
         $franchise = Franchise::updateOrCreate(
             ['id' => $request->franchise_id],
             $request->all()
         );
+       $action->save($franchise, $request);
+       return redirect()->back()->with('success', 'text');
+        */
 
-        $action->save($franchise, $request);
 
-        return redirect()->back()->with('success', 'text');
     }
 
     public function destroy(Franchise $franchise)

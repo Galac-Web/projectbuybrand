@@ -68,7 +68,7 @@ class ValidatorController extends Controller
         }
     }
     public function verifiinn($inn){
-        if(strlen($inn) == 10 &&  is_numeric($inn)) {
+        if((strlen($inn) >= 10 || strlen($inn) <= 12)  &&  is_numeric($inn)) {
             return true;
         }
     }

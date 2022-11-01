@@ -58,6 +58,7 @@
                                     <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 100px;">@lang('Logo')</th>
                                     <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 25px;">@lang('Status')</th>
                                     <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 200px;">@lang('Created At')</th>
+                                    <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 200px;">@lang('Rating')</th>
                                     <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 150px; text-align: right;"></th>
                                 </tr>
                             </thead>
@@ -99,6 +100,7 @@
                                         <td>
                                             {{ $franchise->created_at->diffForHumans() }}
                                         </td>
+                                        <td>{{ $franchise->coutn }}</td>
                                         <td>
                                             <div class="d-flex justify-content-end">
                                                 <div class="btn-group-sm">

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Filters\Traits\Filterable;
 use App\Models\Franchise\Category;
+use App\Models\Franchise\CountRating;
 use App\Traits\HasPresets;
 use App\Traits\HasTags;
 use App\Traits\HasVideo;
@@ -41,7 +42,7 @@ class Franchise extends Model implements HasMedia
     protected $table = 'franchises';
 
     protected $fillable = [
-        'owner_id', 'type_id', 'name','inn','counranting','slug', 'is_active', 'foundation_year', 'start_year',
+        'owner_id', 'type_id', 'name','inn','coutn','slug', 'is_active', 'foundation_year', 'start_year',
         // TODO REMOVE
         'region_start',
     ];
@@ -74,7 +75,6 @@ class Franchise extends Model implements HasMedia
     {
         return $this->hasOne(\App\Models\Franchise\Terms::class, $this->getForeignKey(), 'id');
     }
-
     public function supports(): BelongsToMany
     {
         return $this->belongsToMany(
@@ -95,6 +95,7 @@ class Franchise extends Model implements HasMedia
         )->withPivot('type', 'label', 'is_main');
     }
 
+
     public function badges(): BelongsToMany
     {
         return $this->belongsToMany(
@@ -105,6 +106,7 @@ class Franchise extends Model implements HasMedia
         );
     }
 
+
     public function categories(): BelongsToMany
     {
         return $this->belongsToMany(
@@ -114,6 +116,7 @@ class Franchise extends Model implements HasMedia
             'franchise_category_id'
         );
     }
+
 
     public function companies(): BelongsToMany
     {

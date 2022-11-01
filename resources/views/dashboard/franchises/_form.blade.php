@@ -48,6 +48,10 @@
                 'name' => 'SEO',
                 'view' => 'dashboard.franchises.partials._form.seo',
             ],
+                 'forma' => [
+                'name' => trans('surveyor'),
+                'view' => 'dashboard.franchises.partials._form.formadd',
+            ],
         ];
 
         $tabsHasActive = array_key_search('active', $tabs) === true;
